@@ -12,11 +12,11 @@
 Encoder leftEnc(LEFT_ENC_PIN_A, LEFT_ENC_PIN_B);
 Encoder rightEnc(RIGHT_ENC_PIN_A, RIGHT_ENC_PIN_B);
 
-#include"commands.h"
+#include "commands.h"
 
 long readEncoder(int i) {
   if (i == LEFT)
-    return leftEnc.read();
+    return -leftEnc.read();
   else
     return rightEnc.read();
 }
